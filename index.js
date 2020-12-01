@@ -117,7 +117,7 @@ function mezclarCartas() {
 // Funcion para resetear el juego 
 function resetearAlInicio() {
   cartas.forEach((carta) => carta.classList.remove("girar"));
-  mezclarCartas();
+  cartasClickeables();
   movimientosRestantes = 12;
   aciertos = 0;
   mostrarMovimientos();
