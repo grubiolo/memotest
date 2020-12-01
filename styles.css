@@ -1,0 +1,103 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  /* color: #3474a4; */
+}
+
+body {
+  height: 100vh;
+  display: flex;
+  background-color: #1a5889;
+}
+
+main {
+  margin: auto;
+}
+
+main h1 {
+  color: white;
+  text-align: center;
+  margin: 20px;
+  font-family: "Montserrat", sans-serif;
+}
+
+
+
+.caja-movimientos {
+  display: flex;
+}
+
+#titulo-mov {
+  color: white;
+  text-align: center;
+  margin: 16px;
+  font-family: "Montserrat", sans-serif;
+}
+
+#movimientos {
+  color: white;
+  text-align: center;
+  margin: 16px;
+  font-family: "Montserrat", sans-serif;
+}
+
+#felicitaciones {
+  color: white;
+  text-align: center;
+  font-size: 40px;
+  font-style: inherit;
+  margin: 10px;
+  font-family: "Montserrat", sans-serif;
+}
+
+.empezar {
+  width: 10px;
+  height: 50px;
+}
+
+.memoria-board {
+  width: 700px;
+  height: 700px;
+  margin: auto;
+  display: flex;
+  flex-wrap: wrap;
+  perspective: 1000px;
+}
+
+.memoria-card {
+  width: calc(25% - 10px);
+  height: calc(33.333% - 10px);
+  margin: 5px;
+  position: relative;
+  transform: scale(1);
+  transform-style: preserve-3d;
+  transition: 0.5s;
+  box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.315);
+}
+
+.memoria-card:active {
+  transform: scale(0.95);
+  transition: transform 0.2s;
+}
+
+.memoria-card.girar {
+  transform: rotateY(180deg);
+}
+
+.card-front,
+.card-back {
+  width: 100%;
+  height: 100%;
+  padding: 10px;
+  position: absolute;
+  border-radius: 5px;
+  background: #3474a4;
+  backface-visibility: hidden;
+}
+
+.card-front {
+  transform: rotateY(180deg);
+}
